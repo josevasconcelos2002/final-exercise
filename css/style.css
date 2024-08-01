@@ -265,5 +265,6 @@ img {
 
   .bicicletas {
     flex-wrap: wrap;
+    gap: 50px;
   }
 }
