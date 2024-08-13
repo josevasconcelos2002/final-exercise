@@ -1,0 +1,63 @@
+.introducao {
+  place-content: center;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: left;
+}
+
+.introducao-titulo {
+  font-size: 64px;
+  margin-bottom: 32px;
+  line-height: 1.125;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.introducao-titulo::after {
+  content: "";
+  background-color: var(--p2);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: 4px;
+}
+
+.introducao-texto {
+  font-size: 24px;
+  max-width: 40ch;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.introducao-img {
+  margin-bottom: -120px;
+}
+
+@media (max-width: 1200px) {
+  .introducao-titulo {
+    font-size: 48px;
+  }
+
+  .introducao-texto {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao-titulo {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .introducao-texto {
+    font-size: 18px;
+  }
+  .introducao-img img {
+    height: 360px;
+    width: 100%;
+  }
+}

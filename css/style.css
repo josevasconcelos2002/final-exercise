@@ -1,180 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-:root {
-  --c0: #ffffff;
-  --c1: #f7f7f7;
-  --c2: #ededed;
-  --c3: #dedede;
-  --c4: #cccccc;
-  --c5: #b2b2b2;
-  --c6: #9c9c9c;
-  --c7: #717171;
-  --c8: #595959;
-  --c9: #404040;
-  --c10: #2e2e2e;
-  --c11: #111111;
-  --c12: #000000;
-
-  --p1: #ffbb00;
-  --p2: #e4a30b;
-  --p3: #a66f00;
-  --p4: #664400;
-  --p5: #332200;
-
-  --font-1-xxl: "Poppins" 600 64px;
-  --font-1-xl: "Poppins" 600 32px;
-  --font-1-l: "Poppins" 400 24px;
-  --font-2-l: "Roboto" 400 24px;
-  --font-2-l-b: "Roboto" 500 24px 1.5% ALLCAPS;
-  --font-1-m: "Poppins" 400 18px;
-  --font-1-m-b: "Poppins" 600 18px;
-  --font-2-m: "Roboto" 500 18px;
-  --font-1-s: "Poppins" 400 16px;
-  --font-2-s: "Roboto" 400 16px;
-  --font-2-xs: "Roboto" 400 14px;
-  --font-1-xs: "Poppins" 600 12px;
-}
-
-.flex {
-  display: flex;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 20px 10px;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.header-bg {
-  background-color: var(--c12);
-}
-
-.header {
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px;
-  max-width: 1200px;
-}
-
-.header-menu {
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.header-menu a {
-  display: inline-block;
-  padding: 16px 0;
-  color: var(--c0);
-  font-size: 18px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.header-menu a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 0%;
-  background-color: var(--c0);
-  margin-top: 4px;
-  transition: 0.3s;
-}
-
-.header-menu a:hover::after {
-  width: 100%;
-}
+@import "/css/global/header.css";
+@import "/css/global/global.css";
+@import "/css/home/introducao.css";
+@import "/css/utilities/componentes.css";
+@import "/css/utilities/tipografia.css";
+@import "/css/utilities/cores.css";
 
 .main-bg {
   background-color: var(--c12);
+  box-shadow: inset 0 -120px #fff;
 }
 
-.descricao {
-  place-content: center;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  justify-items: left;
-}
-
-.descricao-titulo {
-  color: var(--c0);
-  font-size: 72px;
-}
-
-.descricao-titulo::after {
-  content: "";
-  background-color: var(--p2);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  left: 4px;
-}
-
-.descricao-texto {
-  color: var(--c5);
-  font-size: 24px;
-  max-width: 40ch;
-}
-
-.descricao-link {
-  padding: 16px 32px;
-  background-color: var(--p1);
-  color: var(--c12);
-  border-radius: 4px;
-  text-transform: uppercase;
-  transition: 0.3s;
-  display: inline-block;
-  align-self: start;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.descricao a:hover {
-  background-color: var(--p2);
-}
-
-.container > h2 {
-  padding-top: 4rem;
-  padding-left: 20px;
-  font-size: 64px;
-}
-
-.container > h2::after {
-  content: "";
-  background-color: var(--p1);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  left: 4px;
+.main-bg > .container.grid {
+  gap: 0px 40px;
+  padding-bottom: 180px;
 }
 
 .bicicletas {
@@ -188,6 +26,7 @@ img {
 .bicicleta.flex {
   gap: 20px;
   flex-direction: column;
+  flex: 1;
 }
 
 .bicicleta h3,
@@ -197,6 +36,7 @@ img {
 
 .bicicleta {
   position: relative;
+  /* min-width: 300px; */
 }
 
 .bicicleta h3::before {
@@ -215,56 +55,14 @@ img {
 }
 
 @media (max-width: 800px) {
-  .header-menu {
-    gap: 20px;
-  }
-
-  .header-menu a {
+  .main-bg {
     background-color: var(--c11);
-    padding: 12px 16px;
-  }
-
-  .header-menu a:hover {
-    background-color: var(--c10);
-  }
-
-  .header-menu a::after {
-    display: none;
-  }
-
-  .container.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .descricao-titulo {
-    font-size: 64px;
-  }
-
-  .descricao-texto {
-    font-size: 18px;
-  }
-
-  .descricao-link {
-    font-size: 12px;
+    box-shadow: inset 0 -100px #fff;
   }
 }
 
 @media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-  }
-
-  .header-menu a {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .container.grid img {
+  /* .container.grid img {
     display: none;
-  }
-
-  .bicicletas {
-    flex-wrap: wrap;
-    gap: 50px;
-  }
+  } */
 }
