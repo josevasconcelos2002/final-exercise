@@ -1,9 +1,16 @@
 @import "/css/global/header.css";
 @import "/css/global/global.css";
+
+/* Home */
 @import "/css/home/introducao.css";
+
+/* Utilidades */
 @import "/css/utilities/componentes.css";
 @import "/css/utilities/tipografia.css";
 @import "/css/utilities/cores.css";
+
+/* Bicicletas */
+@import "/css/bicicletas/bicicletas-lista.css";
 
 .main-bg {
   background-color: var(--c12);
@@ -15,45 +22,6 @@
   padding-bottom: 180px;
 }
 
-.bicicletas {
-  gap: 20px;
-  padding-bottom: 4rem;
-  flex-direction: row;
-  flex: 1;
-  padding: 20px 10px;
-}
-
-.bicicleta.flex {
-  gap: 20px;
-  flex-direction: column;
-  flex: 1;
-}
-
-.bicicleta h3,
-.bicicleta span {
-  padding-left: 20px;
-}
-
-.bicicleta {
-  position: relative;
-  /* min-width: 300px; */
-}
-
-.bicicleta h3::before {
-  content: "";
-  background-color: var(--p1);
-  width: 12px;
-  height: 8px;
-  position: absolute;
-  display: inline-block;
-  left: 3px;
-  bottom: 45px;
-}
-
-.bicicleta img {
-  border-radius: 4px;
-}
-
 @media (max-width: 800px) {
   .main-bg {
     background-color: var(--c11);
@@ -62,7 +30,4 @@
 }
 
 @media (max-width: 600px) {
-  /* .container.grid img {
-    display: none;
-  } */
 }
