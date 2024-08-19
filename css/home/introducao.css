@@ -10,12 +10,8 @@
 }
 
 .introducao-texto {
-  font-size: 24px;
   max-width: 40ch;
   margin-bottom: 20px;
-  line-height: 1.5;
-  font-family: "Roboto";
-  font-weight: 400;
 }
 
 .introducao-img {

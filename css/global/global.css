@@ -28,23 +28,6 @@ img[src$=".jpg"] {
   border-radius: 4px;
 }
 
-.container > h2 {
-  padding-top: 4rem;
-  padding-left: 20px;
-  font-size: 64px;
-}
-
-.container > h2::after {
-  content: "";
-  background-color: var(--p1);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  left: 4px;
-}
-
 @media (max-width: 800px) {
   .container.grid {
     grid-template-columns: 1fr;

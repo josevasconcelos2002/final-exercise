@@ -3,6 +3,7 @@
 
 /* Home */
 @import "/css/home/introducao.css";
+@import "/css/home/tecnologia.css";
 
 /* Utilidades */
 @import "/css/utilities/componentes.css";
