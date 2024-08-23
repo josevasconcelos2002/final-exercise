@@ -79,3 +79,9 @@
     margin-bottom: 60px;
   }
 }
+
+@media (max-width: 600px) {
+  .flex.tecnologia-lista {
+    flex-direction: column;
+  }
+}
