@@ -63,4 +63,8 @@
   .parceiros li:nth-child(even) {
     border-right: none;
   }
+
+  .parceiros li {
+    padding: 20px;
+  }
 }
